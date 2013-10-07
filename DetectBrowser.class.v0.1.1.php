@@ -3,7 +3,7 @@
  * DetectBrowser.class.
  * v 0.1.1
  * автор: OL Werdffelynir.
- * бновлено: 12.01.2013
+ * обновлено: 12.01.2013
  */ 
 
 class DetectBrowser {
@@ -12,7 +12,7 @@ class DetectBrowser {
 	public $userAgent;
 	public $name;
 	public $version;
-    public $platform;
+        public $platform;
 	private $regChrom = "/Chrome/";
 	private $regMozilla = "/Firefox/";
 	private $regOpera = "/Opera/";
@@ -125,6 +125,7 @@ class DetectBrowser {
 	
 	
 	function os($ossys){
+		
 		$userAgent = $this->userAgent;
 		
 		if(preg_match($this->osWindows, $userAgent) ){
@@ -147,6 +148,7 @@ class DetectBrowser {
 	}
 	
 	function agent($browsersys){
+		
 		if($browsersys == $this->browser){
 			return true;
 		}else{
